@@ -11,19 +11,27 @@
 
     <Replace>
 
+<!--        <MethodCall>-->
+<!--            <Source extend="false">-->
+<!--                int android.util.Log.d(java.lang.String,java.lang.String)-->
+<!--            </Source>-->
+<!--            <Target>-->
+<!--                $_= com.didichuxing.tools.test.LogUtils.log($$);-->
+<!--            </Target>-->
+<!--            <Filter ignoreGlobalIncludes="true">-->
+<!--                <Include>om.didichuxing.tools.test.Utils</Include>-->
+<!--                &lt;!&ndash;<Exclude>com.didichuxing.tools.test.Utils</Exclude>&ndash;&gt;-->
+<!--                &lt;!&ndash;<Exclude>android.*</Exclude>&ndash;&gt;-->
+<!--                &lt;!&ndash;<Exclude>com.android.*</Exclude>&ndash;&gt;-->
+<!--            </Filter>-->
+<!--        </MethodCall>-->
         <MethodCall>
-            <Source extend="false">
+            <Source>
                 int android.util.Log.d(java.lang.String,java.lang.String)
             </Source>
             <Target>
-                $_= com.didichuxing.tools.test.LogUtils.log($$);
+                $_=com.didichuxing.tools.test.LogUtils.log($1,$2);
             </Target>
-            <Filter ignoreGlobalIncludes="true">
-                <Include>om.didichuxing.tools.test.Utils</Include>
-                <!--<Exclude>com.didichuxing.tools.test.Utils</Exclude>-->
-                <!--<Exclude>android.*</Exclude>-->
-                <!--<Exclude>com.android.*</Exclude>-->
-            </Filter>
         </MethodCall>
 
         <MethodExecution>
