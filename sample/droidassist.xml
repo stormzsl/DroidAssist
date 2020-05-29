@@ -3,9 +3,12 @@
     <Global>
         <Filter>
             <Include>*</Include>
-            <!--<Exclude>android.*</Exclude>-->
-            <!--<Exclude>com.android.*</Exclude>-->
+            <Exclude>android.*</Exclude>
+            <Exclude>com.android.*</Exclude>
+            <Exclude>*.R.*</Exclude>
+            <Exclude>*.R$.*</Exclude>
         </Filter>
+
     </Global>
 
 
